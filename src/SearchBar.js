@@ -1,16 +1,19 @@
 import React from 'react';
 
-export default function SearchBar() {
+export default function SearchBar(props) {
   return (
     <div>
       <div class="ui fluid icon input">
-        <input type="text" placeholder="Keyword" />
+        <input
+          onChange={props.onInputChange}
+          type="text"
+          placeholder="Keyword"
+          value={props.keyword}
+        />
       </div>
       <div>
         <select class="ui fluid search dropdown" multiple="">
-          <option value="" disabled selected>
-            Category
-          </option>
+          <option value="">Category</option>
           <option value="animals">Animals</option>
           <option value="backgrounds">Backgrounds</option>
           <option value="buildings">Buildings</option>
