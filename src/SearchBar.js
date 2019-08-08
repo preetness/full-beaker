@@ -3,16 +3,22 @@ import React from 'react';
 export default function SearchBar(props) {
   return (
     <div>
-      <div class="ui fluid icon input">
+      <div className="ui fluid input">
         <input
           onChange={props.onInputChange}
           type="text"
           placeholder="Keyword"
           value={props.keyword}
+          style={{ marginBottom: '15px' }}
         />
       </div>
       <div>
-        <select class="ui fluid search dropdown" multiple="">
+        <select
+          className="ui fluid search dropdown"
+          multiple=""
+          onChange={props.onCategoryChange}
+          style={{ marginBottom: '15px' }}
+        >
           <option value="">Category</option>
           <option value="animals">Animals</option>
           <option value="backgrounds">Backgrounds</option>
@@ -35,9 +41,15 @@ export default function SearchBar(props) {
           <option value="science">Science</option>
         </select>
       </div>
-      <div>
-        <button class="fluid ui button">Search</button>
-      </div>
+
+      <button
+        type="submit"
+        style={{ marginBottom: '50px' }}
+        onClick={props.onButtonClick}
+        className="fluid ui green button"
+      >
+        Search
+      </button>
     </div>
   );
 }
