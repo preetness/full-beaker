@@ -64,7 +64,7 @@ export default function App() {
         }}
         className="ui center aligned header"
       >
-        Full Beaker Code Challenge
+        PixFinder
       </h1>
       <SearchBar
         onButtonClick={onButtonClick}
